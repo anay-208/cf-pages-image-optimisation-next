@@ -6,16 +6,8 @@ If you tried to deploy nextjs to CF Pages, you definately realised that image op
 
 In this tutorial, I'll help you configure image optimisations with **Cloudflare Images**, which has first 1000 image resizes free!
 
-
-## Procedure
-
-As You know, Cloudflare Images is a pay as you go service. So I'll also implement some Security measures.
-
-
-
-
-
-
+## Why
+If you used cloudflare pages, you probably know that Next.js Image optimisation doesn't work there, as Cloudflare only supports edge runtime. This tutorial will guide you how to enable image optimisations.
 
 
 # Steps
@@ -121,3 +113,13 @@ You using your next/image component anywhere, and it'll transform the images usi
 - https://developers.cloudflare.com/fundamentals/reference/cdn-cgi-endpoint/
 - https://developers.cloudflare.com/images/get-started/#enable-transformations
 - https://nextjs.org/docs/app/api-reference/components/image#devicesizes
+
+
+# Sponsor
+
+If you find this project helpful and would like to support its development, consider sponsoring me:
+
+- [GitHub Sponsors](https://github.com/sponsors/anay-208)
+- [Buy Me a Coffee](https://www.buymeacoffee.com/anay.208)
+
+Your support is greatly appreciated!
