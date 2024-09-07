@@ -63,7 +63,7 @@ export async function GET(req: NextRequest, { params }: Props) {
   const addSlash = process.env.CF_ZONE_URI.endsWith("/") ? "" : "/";
   const url = `${
     process.env.CF_ZONE_URI + addSlash
-  }cdn-cgi/${parseImageParams({ width, quality, blur })}/${path}`;
+  }cdn-cgi/image/${parseImageParams({ width, quality, blur })}/${path}`;
   const response = await fetch(url, {
     headers: {
       // A custom one with WAF rules

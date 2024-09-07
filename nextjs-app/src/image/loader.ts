@@ -15,5 +15,5 @@ const normalizeSrc = (src: string) => {
     ];
     const paramsString = params.join("&");
   
-    return `/media/images/${normalizeSrc(src)}?${paramsString}`;
+    return `/media/${normalizeSrc(src)}?${paramsString}`;
   }
