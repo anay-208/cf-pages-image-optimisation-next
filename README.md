@@ -2,7 +2,7 @@
 
 ## Introduction
 
-If you tried to deploy nextjs to CF Pages, you definately realised that image optimisation was not working.
+If you tried to deploy nextjs to CF Pages, you definitely realised that image optimisation was not working.
 
 In this tutorial, I'll help you configure image optimisations with **Cloudflare Images**, which has first 1000 image resizes free!
 
@@ -40,7 +40,7 @@ Before you can enable transformations, you must purchase Cloudflare Images(could
 1. Log in to the [Cloudflare dashboard ↗](https://dash.cloudflare.com/?to=/:account/images/delivery-zones) and select your account.
 2. Select the zone where you want to enable transformations.
 3. Select Enable.
-4. To transform images only from the enabled zone, uncheck Resize images from any origin. This will prevent third parties from resizing images at any origin. 
+4. To transform images only from the enabled zone, uncheck Resize images from any origin. This will prevent third parties from resizing images at any origin.
 
 Image Transformations will be enabled for the zone, and images can be transferred by going to `/cdn-cgi/image/{styles}/{path}`
 
@@ -50,7 +50,7 @@ Image Transformations will be enabled for the zone, and images can be transferre
 
 
 > #### **Note**
-> 
+>
 > With Resize images from any origin unchecked, only the initial URL passed will be checked. Any redirect returned will be followed, including if it leaves the zone, and the resulting image will be transformed.
 
 
@@ -83,7 +83,7 @@ To Create the WAF Rule:
 2. Select Your Account, then your zone.
 3. Click Security > WAF on the sidebar.
 4. Click on Custom Rules on the top bar.
-5. Give the rule a name & Add The following expression: 
+5. Give the rule a name & Add The following expression:
 ```
 (http.request.uri.path wildcard "/cdn-cgi/image/*" and all(http.request.headers["authorization"][*] ne "token"))
 ```
@@ -92,7 +92,7 @@ Make sure to replace `token` with a randomly generated token, which can be gener
 
 ### Setup Nextjs
 
-You can either clone this repo, or copy the code in [\[media\]/\[...path\]/route.ts](nextjs-app/src/app/media/[...path]/route.ts) 
+You can either clone this repo, or copy the code in [\[media\]/\[...path\]/route.ts](nextjs-app/src/app/media/[...path]/route.ts)
 Make sure to add the necessary env variables as defined in [env.d.ts](nextjs-app/env.d.ts)
 
 You've to perform some additional steps if you copy pasted the code:
