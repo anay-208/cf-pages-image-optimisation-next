@@ -96,8 +96,8 @@ You can either clone this repo, or copy the code in [\[media\]/\[...path\]/route
 Make sure to add the necessary env variables as defined in [env.d.ts](nextjs-app/env.d.ts)
 
 You've to perform some additional steps if you copy pasted the code:
-- Create a [Loader File](nextjs-app\src\image\loader.ts), which tells nextjs how to handle src url of image
-- Add the Loader file in [next.config.mjs](nextjs-app\next.config.mjs)
+- Create a [Loader File](nextjs-app/src/image/loader.ts), which tells nextjs how to handle src url of image
+- Add the Loader file in [next.config.mjs](nextjs-app/next.config.mjs)
 
 
 The default sizes are mentioned [here](<https://nextjs.org/docs/app/api-reference/components/image#devicesizes>)
