@@ -35,7 +35,7 @@ Transformations let you optimize images that are stored outside of Cloudflare Im
 
 
 
-Before you can enable transformations, you must purchase Cloudflare Images. To use transformations, you will need to enable the feature on each zone:
+Before you can enable transformations, you must purchase Cloudflare Images(could be $0 no storage  plan). To use transformations, you will need to enable the feature on each zone:
 
 1. Log in to the [Cloudflare dashboard ↗](https://dash.cloudflare.com/?to=/:account/images/delivery-zones) and select your account.
 2. Select the zone where you want to enable transformations.
@@ -75,7 +75,7 @@ It'll then proceed to send the request to `/cdn-cgi/image/...`, and return the i
 
 > #### Good To Know
 >
-> If you're thinking about directly transforming with workers in api route, it won't work. If you create a separate worker to do this, it'll only work then.
+> If you're thinking about directly transforming with workers in api route, it won't work. If you create a separate worker to do this, it'll then only work.
 
 To Create the WAF Rule:
 
