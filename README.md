@@ -1,10 +1,33 @@
 # CF Images Optimisations with Next.js
 
+This Repo has answers/solutions to all the following questions:
+- Next.js image optimisations is not working in Cloudflare pages.
+- How to securely configure image optimisations with Cloudflare Pages + Next.js?
+- Next.js Cloudflare Image Optimisation is resizing any width.
+- Next.js Image Optimisation is not returning webp in Cloudflare Images.
+
+
+
+
 ## Introduction
 
 If you tried to deploy nextjs to CF Pages, you definitely realised that image optimisation was not working.
 
 In this tutorial, I'll help you configure image optimisations with **Cloudflare Images**, which has first 1000 image resizes free!
+
+
+## Table of Contents
+- [Why](#why)
+- [Steps](#steps)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+    - [Enable Image Transformation for a zone](#enable-image-transformation-for-a-zone)
+    - [Create WAF Rules](#create-waf-rules)
+    - [Setup Nextjs](#setup-nextjs)
+- [FAQs](#faqs)
+- [Sources](#sources)
+- [Sponsor](#sponsor)
+
 
 ## Why
 If you used cloudflare pages, you probably know that Next.js Image optimisation doesn't work there, as Cloudflare only supports edge runtime. This tutorial will guide you how to enable image optimisations.
@@ -113,6 +136,12 @@ You using your next/image component anywhere, and it'll transform the images usi
 - https://developers.cloudflare.com/fundamentals/reference/cdn-cgi-endpoint/
 - https://developers.cloudflare.com/images/get-started/#enable-transformations
 - https://nextjs.org/docs/app/api-reference/components/image#devicesizes
+
+
+## FAQS
+
+### Q: Webp format is not supported in Cloudflare Images No Storage plan. What to do?
+A: The only solution I found is that to directly serve webp images. You can convert your images folder(png) file to a images folder(webp) **locally** to acheive that. I've also created a [script for it](/png-to-webp.js).
 
 
 # Sponsor
